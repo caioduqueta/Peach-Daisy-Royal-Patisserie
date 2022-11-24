@@ -1,0 +1,168 @@
+{
+  "Team": [
+    {
+      "id": 1,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Moldura_Peach.png",
+      "title": "Princess Peach",
+      "description": "Princess of the Mushroom Kingdom, Co-Founder, very kind and is used to being kidnapped by Bowser.",
+      "altText": "Princess Peach"
+    },
+    {
+      "id": 2,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Moldura_Daisy.png",
+      "title": "Princess Daisy",
+      "description": "Princess of Sarasaland, Co-Founder and very bossy.",
+      "altText": "Princess Daisy"
+    },
+    {
+      "id": 3,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Moldura_Chef.png",
+      "title": "Chef Toad",
+      "description": "Graduated from the New Donk City gastronomy college, he has won several awards including the 'Luncheon Kingdom 7 Stars'.",
+      "altText": "Chef Toad"
+    }
+  ],
+  "Locations": [
+    {
+      "id": 1,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Baby_Park.png",
+      "text": "Baby Park",
+      "altText": "Baby Park"
+    },
+    {
+      "id": 2,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Toads_Harbor.png",
+      "text": "Toad's Harbor",
+      "altText": "Toad's Harbor"
+    },
+    {
+      "id": 3,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Yoshi_Circuit_Island.png",
+      "text": "Yoshi's Circuit",
+      "altText": "Yoshi's Circuit"
+    }
+  ],
+  "Banner": [
+    {
+      "id": 1,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Sweet_Sweet_Canyon.png",
+      "description": "We ship to all kingdoms...",
+      "altText": "Sweet Sweet Canyon"
+    },
+    {
+      "id": 2,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Bowsers_Castle.png",
+      "description": "Including Bowser's Castle.",
+      "altText": "Bowser's Castle"
+    }
+  ],
+  "Customers": [
+    {
+      "id": 1,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Mario.png",
+      "description": "Mama Mia!",
+      "name": "Mario",
+      "altText": "Mario"
+    },
+    {
+      "id": 2,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Yoshi.png",
+      "description": "Tongue Noise!",
+      "name": "Yoshi",
+      "altText": "Yoshi"
+    },
+     {
+       "id": 3,
+       "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/bowserjr.png",
+       "description": "Nice Cake Mama!",
+       "name": "Bowser Jr",
+       "altText": "Bowser Jr"
+    }
+  ],
+  "Products":[
+    {
+      "id": 1,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Pineapple_Crowned_Entremet.png",
+      "name": "Pineapple Crowned Entremet",
+      "altText": "",
+      "price": 299
+    },
+    {
+      "id": 2,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/IceCream_Strawberry_Pie.png",
+      "name": "IceCream Strawberry Pie",
+      "altText": "",
+      "price": 299
+    },
+    {
+      "id": 3,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Black_and_White_Chocolate_Foundant.png",
+      "name": "Black and White Chocolate Foundant",
+      "altText": "",
+      "price": 99
+    },
+    {
+      "id": 4,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/lattice_apple_pie.png",
+      "name": "Lattice Apple Pie",
+      "altText": "",
+      "price": 199
+    },
+    {
+      "id": 5,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Riccota_and_candied_fruit_Cannoli.png",
+      "name": "Riccota and Candied Fruit Cannoli",
+      "altText": "",
+      "price": 99
+    },
+    {
+      "id": 6,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/funfetti_ice_cream_sandwiches.png",
+      "name": "Toad's Funfetti Ice Cream Sandwiche",
+      "altText": "",
+      "price": 99
+    },
+    {
+      "id": 7,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Belgium_Chocolate_Bowser_cake.png",
+      "name": "Bowser's Piece of Cake",
+      "altText": "",
+      "price": 129
+    },
+    {
+      "id": 8,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Pistachio_and_berry_cannoli.png",
+      "name": "Pistachio and Berry Cannoli",
+      "altText": "",
+      "price": 99
+    },
+    {
+      "id": 9,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Princess_Peachs_Cake.png",
+      "name": "Princess Peach's Piece of Cake",
+      "altText": "",
+      "price": 129
+    },
+    {
+      "id": 10,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Chocolate_Mousse_Cake.png",
+      "name": "Chocolate Mousse Piece of Cake",
+      "altText": "",
+      "price": 99
+    },
+    {
+      "id": 11,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Ginger_Bread_and_Chocolate_Entremet.png",
+      "name": "Ginger Bread and Chocolate Entremet",
+      "altText": "",
+      "price": 299
+    },
+    {
+      "id": 12,
+      "image": "https://duqueta-dev-imgs.s3.amazonaws.com/royal/Funfetti_cake.png",
+      "name": "Funfetti Cake",
+      "altText": "",
+      "price": 199
+    }
+  ]
+}
