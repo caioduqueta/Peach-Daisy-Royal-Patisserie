@@ -53,7 +53,7 @@ export const ProductsPrice = styled.div`
     align-items: flex-end;
     color: ${(props) => props.theme.Black};
     gap: 1rem;
-    width: 8rem;
+    width: 10rem;
 
     span {
       color: ${(props) => props.theme.Black};
@@ -86,7 +86,7 @@ export const ProductsPrice = styled.div`
     align-items: flex-end;
     color: ${(props) => props.theme.Black};
     gap: 1rem;
-    width: 8rem;
+    width: 10rem;
 
     span {
       color: ${(props) => props.theme.Black};
@@ -132,7 +132,7 @@ export const ProductsPrice = styled.div`
      align-items: flex-end;
      color: ${(props) => props.theme.Black};
      gap: 1rem;
-     width: 8rem;
+     width: 10rem;
 
      span {
        color: ${(props) => props.theme.Black};
@@ -143,3 +143,29 @@ export const ProductsPrice = styled.div`
      }
    }
  `
+
+export const FinishButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin: 2rem;
+  padding: 1rem 2rem;
+  width: auto;
+  height: auto;
+
+  background-color: ${(props) => props.theme['Bg-header']};
+  border: none;
+  border-radius: 36px;
+  color: ${(props) => props.theme.Golden};
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.2s;
+
+  :hover {
+    color: ${(props) => props.theme.White};
+  }
+`

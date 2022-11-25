@@ -55,6 +55,7 @@ export function Pâtisserie() {
           {Array.from(Array(pages), (product, index) => { 
             return (
               <button
+                key={index + 1}
                 type="button"
                 style={index === currentPage ? { color: '#E0BB65' } : { color: 'white' }}
                 value={index}

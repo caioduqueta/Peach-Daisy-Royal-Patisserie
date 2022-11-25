@@ -3,7 +3,8 @@ import { CoinVertical } from "phosphor-react";
 import { useContext, useState } from "react";
 import { ProductsContext } from "../../../../Context/Context";
 import { v4 as uuidv4 } from 'uuid'
-  import { toast } from 'react-toastify'
+import { toast } from 'react-toastify'
+import {IItensInCart} from '../../../../Context/Context'
 
 
 interface ProductProps {
@@ -21,9 +22,11 @@ export function Product({ id, image, name, altText, price }: ProductProps) {
   function notify(){
     toast(`${name} has been added to your cart`)
   }
+
+  const qtd = 1
   
   function handleAddInCart() {
-    const item = { id, image, name, altText, price, idInCart: uuidv4() }
+    const item = { id, image, name, altText, price, idInCart: uuidv4(), qtd }
     addInCart(item)
     notify()
   }

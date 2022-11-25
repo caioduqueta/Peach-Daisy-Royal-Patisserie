@@ -7,13 +7,14 @@ export interface IItensInCart{
   altText: string
   price: number
   idInCart: string
+  qtd: number
 }
 
 interface IProductsContext {
   itensInCart: IItensInCart[]
   addInCart: (item: IItensInCart) => void
   removeFromCart: (CartId: string) => void
-
+  updateItemQtd: (idInCart: string, NewQuantity: number) => void
 }
 
 interface ProductsProviderProps{
@@ -36,12 +37,26 @@ export function ProductsProvider({ children }: ProductsProviderProps) {
     setItensInCart(itensInCartWithoutRemovedOne)
   }
 
+  function updateItemQtd(idInCart: string, NewQuantity: number) {
+  const NewOrder = []
+    for (let item of itensInCart) {
+      if (item.idInCart === idInCart) {
+      item.qtd = NewQuantity
+      NewOrder.push(item)
+    } else {
+      NewOrder.push(item)
+    }
+  }
+  setItensInCart(NewOrder)
+  }
+
   return (
     <ProductsContext.Provider
       value={{
         itensInCart,
         addInCart,
         removeFromCart,
+        updateItemQtd
       }}
     >
       {children}

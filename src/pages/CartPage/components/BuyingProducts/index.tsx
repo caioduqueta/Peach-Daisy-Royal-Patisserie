@@ -10,11 +10,12 @@ interface BuyingProductsProps{
   name: string
   price: number
   idInCart: string
+  qtd: number
 }
 
-export function BuyingProducts({ id, image, altText, name, price,idInCart }: BuyingProductsProps) {
-  const { removeFromCart } = useContext(ProductsContext)
-  const [quantityOfThisItemInCart, setQuantityOfThisItemInCart] = useState(1)
+export function BuyingProducts({ id, image, altText, name, price, idInCart, qtd }: BuyingProductsProps) {
+  const { removeFromCart, updateItemQtd } = useContext(ProductsContext)
+  const [quantityOfThisProductInCart, setQuantityOfThisProductInCart] = useState(qtd)
 
   function HandleRemoveFromCart() {
     const CartId = idInCart
@@ -22,11 +23,17 @@ export function BuyingProducts({ id, image, altText, name, price,idInCart }: Buy
   }
 
   function handleAddQuantityOfThisItemInCart() {
-    setQuantityOfThisItemInCart(quantityOfThisItemInCart + 1)
+    const NewQuantity = quantityOfThisProductInCart + 1
+    setQuantityOfThisProductInCart(NewQuantity)
+    updateItemQtd(idInCart, NewQuantity)
   }
 
   function handleRemoveQuantityOfThisItemInCart() {
-    if (quantityOfThisItemInCart >= 2) setQuantityOfThisItemInCart(quantityOfThisItemInCart - 1)
+    if (quantityOfThisProductInCart >= 2) {
+      const NewQuantity = quantityOfThisProductInCart - 1
+      setQuantityOfThisProductInCart(quantityOfThisProductInCart - 1)
+      updateItemQtd(idInCart, NewQuantity)
+    }
   }
 
   return (
@@ -44,7 +51,7 @@ export function BuyingProducts({ id, image, altText, name, price,idInCart }: Buy
           <button className="quantityIcon" onClick={handleAddQuantityOfThisItemInCart}>
             <PlusCircle weight="fill" size={48} alt="Plus" />
           </button>
-          <span>{quantityOfThisItemInCart}</span>
+          <span>{quantityOfThisProductInCart}</span>
           <button className="quantityIcon" onClick={handleRemoveQuantityOfThisItemInCart}>
             <MinusCircle weight="fill" size={48} alt="Minus" />
           </button>

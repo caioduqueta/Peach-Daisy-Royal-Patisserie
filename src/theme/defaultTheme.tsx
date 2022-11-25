@@ -6,4 +6,5 @@ export const defaultTheme = {
   'Bg-header': '#930500',
   'bg-main': '#FEF2F2',
   'box-pagination': '#FCC8D3',
+  byDuqueta: '#730602',
 }

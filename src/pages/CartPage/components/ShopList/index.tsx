@@ -1,27 +1,43 @@
-import {BuyingTotal, ProductsPrice, Shipping, ShopListContainer, ShopListContent, TotalPrice} from './styles'
-import { CoinVertical, MinusCircle, Percent, PlusCircle, Trash } from 'phosphor-react'
+import {BuyingTotal, FinishButton, ProductsPrice, Shipping, ShopListContainer, ShopListContent, TotalPrice} from './styles'
+import { CoinVertical } from 'phosphor-react'
 import { BuyingProducts } from '../BuyingProducts'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { ProductsContext } from '../../../../Context/Context'
 
 export function ShopList() {
 
   const { itensInCart } = useContext(ProductsContext)
+  const [originalPrice, setOriginalPrice] = useState(0)
+  const [totalPrice, setTotalPrice] = useState(0)
   
+  function discoverOriginalPrice() {
+    let TotalOriginalPrice = 0
+    itensInCart.forEach((item) => {
+      TotalOriginalPrice += item.price * item.qtd
+    })
+    setOriginalPrice(TotalOriginalPrice)
+    setTotalPrice(TotalOriginalPrice + 50)
+  }
+  
+  useEffect(() => {
+    discoverOriginalPrice()
+  }, [itensInCart])
 
   return (
     <ShopListContainer>
       <ShopListContent>
         {itensInCart.map((item) => {
-          return (<BuyingProducts
-            key={item.idInCart}
-            id={item.id}
-            image={item.image}
-            altText={item.altText}
-            name={item.name}
-            price={item.price}
-            idInCart={item.idInCart}
-          />
+          return (
+            <BuyingProducts
+              key={item.idInCart}
+              id={item.id}
+              image={item.image}
+              altText={item.altText}
+              name={item.name}
+              price={item.price}
+              idInCart={item.idInCart}
+              qtd={item.qtd}
+            />
           )
         })}
         <BuyingTotal>
@@ -29,25 +45,28 @@ export function ShopList() {
             <p>Original Price:</p>
             <div>
               <CoinVertical weight="fill" size={24} />
-              <span>1000 coins</span>
+              <span>{originalPrice} coins</span>
             </div>
           </ProductsPrice>
           <Shipping>
             <p>Shipping:</p>
             <div>
               <CoinVertical weight="fill" size={24} />
-              <span>-50 coins</span>
+              <span>50 coins</span>
             </div>
           </Shipping>
           <TotalPrice>
             <p>Total Price:</p>
             <div>
               <CoinVertical weight="fill" size={24} />
-              <span>950 coins</span>
+              <span>{totalPrice} coins</span>
             </div>
           </TotalPrice>
         </BuyingTotal>
       </ShopListContent>
+      <FinishButton>
+        <span>Finish Order</span>
+      </FinishButton>
     </ShopListContainer>
   )
 }
